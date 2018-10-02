@@ -1,0 +1,22 @@
+
+%emblem {
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  content: '';
+  width: 125px;
+  height: 125px;
+  display: block;
+  position: absolute;
+  right: -130px;
+  background-size: 125px 125px;
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+@mixin reflected-gradient($edge, $mid) {
+  background: $mid;
+  background: -moz-linear-gradient(top, $edge 0%, $mid 50%, $edge 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$edge), color-stop(50%,$mid), color-stop(100%,$edge));
+  background: -webkit-linear-gradient(top, $edge 0%, $mid 50%, $edge 100%);
+  background: -o-linear-gradient(top, $edge 0%, $mid 50%, $edge 100%);
+  background: linear-gradient(to bottom, $edge 0%, $mid 50%, $edge 100%);
+}
