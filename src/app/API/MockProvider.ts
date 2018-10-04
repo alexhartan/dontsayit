@@ -6,17 +6,17 @@ import { HttpClient, HttpParams } from '@angular/common/http';
  * should hit cached json files
  */
 @Injectable()
-export class CRMProvider {
+export class MockProvider {
 
   constructor(public http: HttpClient) {
   }
 
-
-  getOptions() {
-    return;
+  mockSend(): boolean {
+    return true;
   }
 
-  async mockSend(): Promise<any> {
+  async send(): Promise<any> {
+
     const data = new HttpParams()
       ;
 

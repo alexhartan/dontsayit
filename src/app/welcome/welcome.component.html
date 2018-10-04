@@ -1,3 +1,6 @@
-<p>
-  welcome works!
-</p>
+<div class="welcome" [formGroup]="roomForm">
+
+  <label for="game-room">Sup, enter game code here:</label>
+  <input type="text" placeholder="Ex: 5434" formControlName="gameRoom" />
+  <button class="btn" (click)="connectToRoom()">Go to Room</button>
+</div>
