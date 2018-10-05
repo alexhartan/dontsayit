@@ -1,4 +1,16 @@
 <div class="gameRoom">
-  <h1> Welcome to game nr: {{ gameRoom }} </h1>
-  Faggit!
+
+  <div class="players-list" *ngIf="grm.currentGameRoom.players.length">
+    <h2>Connected Players</h2>
+    <ul>
+      <li *ngFor="let player of grm.currentGameRoom.players">
+        {{player.name}}
+      </li>
+    </ul>
+  </div>
+
+  <button class="btn" [disabled]="!grm.currentGameRoom.players.length" [routerLink]="['/solutions']">
+    All in, let's go
+  </button>
+
 </div>

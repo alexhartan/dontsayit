@@ -13,13 +13,19 @@ import { routes } from './app.routes';
 
 import { MockProvider } from './API/MockProvider';
 import { GameRoomComponent } from './game-room/game-room.component';
+import { PlayerManagerService } from './player-manager/player-manager.service';
+import { GameRoomManager } from './game-room/game-room-manager.service';
+import { HeaderComponent } from './header/header.component';
+import { GameRoundComponent } from './game-round/game-round.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     SolutionsInputComponent,
-    GameRoomComponent
+    GameRoomComponent,
+    GameRoundComponent,
+    HeaderComponent,
   ],
   imports: [
     CommonModule,
@@ -30,7 +36,9 @@ import { GameRoomComponent } from './game-room/game-room.component';
     RouterModule.forRoot(routes),
   ],
   providers: [
-    MockProvider
+    MockProvider,
+    PlayerManagerService,
+    GameRoomManager
   ],
   bootstrap: [AppComponent]
 })
