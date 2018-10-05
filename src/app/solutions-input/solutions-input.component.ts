@@ -30,7 +30,7 @@ export class SolutionsInputComponent implements OnInit {
       solution5: [''],
     });
 
-    this.startTimer(5);
+    this.startTimer(60);
   }
 
   startTimer(nrOfSeconds: number = 60) {
