@@ -1,3 +1,4 @@
+import { MessageBusService } from './../message-bus/message-bus.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Subscription, interval } from 'rxjs';
@@ -11,14 +12,17 @@ import { takeWhile } from 'rxjs/operators';
 export class GameRoundComponent implements OnInit {
 
   counter: number;
-  solutionsForm: FormGroup;
   private _subscriptions$: Subscription[] = [];
 
-  constructor() {
+  constructor(
+    private _mbs: MessageBusService
+  ) {
     this.startTimer(60);
+
   }
 
   ngOnInit() {
+    this._mbs.backgroundProgress.emit(100);
   }
 
   startTimer(nrOfSeconds: number = 60) {

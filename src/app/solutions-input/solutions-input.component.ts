@@ -1,3 +1,4 @@
+import { MessageBusService } from './../message-bus/message-bus.service';
 import { Component, OnInit } from '@angular/core';
 import { Subscription, interval } from 'rxjs';
 import { takeWhile } from 'rxjs/operators';
@@ -19,7 +20,8 @@ export class SolutionsInputComponent implements OnInit {
   constructor(
     private _formBuilder: FormBuilder,
     private _gameRoomManager: MockProvider,
-    private _router: Router
+    private _router: Router,
+    private _mbs: MessageBusService
   ) {
 
     this.solutionsForm = this._formBuilder.group({
@@ -31,6 +33,7 @@ export class SolutionsInputComponent implements OnInit {
     });
 
     this.startTimer(60);
+    this._mbs.backgroundProgress.emit(66);
   }
 
   startTimer(nrOfSeconds: number = 60) {

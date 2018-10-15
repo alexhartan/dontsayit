@@ -1,3 +1,4 @@
+import { MessageBusService } from './../message-bus/message-bus.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { MockProvider } from '../API/MockProvider';
@@ -30,7 +31,7 @@ export class WelcomeComponent implements OnInit {
     if (this.roomForm.controls['gameRoom'].valid) {
       const roomCode = this.roomForm.controls['gameRoom'].value;
       if (this._mockProvider.send()) {
-        this._router.navigate(['gameRoom', roomCode]);
+        this._router.navigate(['playerJoined', roomCode]);
       }
     }
   }

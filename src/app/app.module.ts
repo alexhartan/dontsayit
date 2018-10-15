@@ -17,6 +17,10 @@ import { PlayerManagerService } from './player-manager/player-manager.service';
 import { GameRoomManager } from './game-room/game-room-manager.service';
 import { HeaderComponent } from './header/header.component';
 import { GameRoundComponent } from './game-round/game-round.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { PlayerJoinedComponent } from './player-joined/player-joined.component';
+import { MessageBusService } from './message-bus/message-bus.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,19 +30,23 @@ import { GameRoundComponent } from './game-round/game-round.component';
     GameRoomComponent,
     GameRoundComponent,
     HeaderComponent,
+    PlayerJoinedComponent,
   ],
   imports: [
     CommonModule,
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AngularFontAwesomeModule,
     FormsModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(routes),
   ],
   providers: [
     MockProvider,
     PlayerManagerService,
-    GameRoomManager
+    GameRoomManager,
+    MessageBusService
   ],
   bootstrap: [AppComponent]
 })

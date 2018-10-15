@@ -1,3 +1,4 @@
+import { MessageBusService } from './../message-bus/message-bus.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -14,7 +15,8 @@ export class GameRoomComponent implements OnInit, OnDestroy {
 
   constructor(
     private _activated: ActivatedRoute,
-    public grm: GameRoomManager
+    public grm: GameRoomManager,
+    private _mbs: MessageBusService
   ) {
 
   }
@@ -24,6 +26,7 @@ export class GameRoomComponent implements OnInit, OnDestroy {
       this.grm.getRoom(params['roomId']);
     });
     this._subscriptions$.push(sub$);
+    this._mbs.backgroundProgress.emit(66);
   }
 
   ngOnDestroy(): void {
