@@ -25,6 +25,7 @@ export class WelcomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this._mbs.backgroundProgress.emit(100);
   }
 
   connectToRoom() {

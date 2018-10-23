@@ -1,12 +1,12 @@
 <div class="body" [ngClass]="{'red-team': team === 'red', 'blue-team': team === 'blue'}">
         
     <div class="progress-bg" [ngClass]="{'third': progress === 33, 'two-thirds': progress===66,'full-width': progress===100}">
-        <app-header></app-header>
-        
-        <main [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
-        <router-outlet #o="outlet"></router-outlet>
-      </main>
     </div>
+    <app-header></app-header>
+    
+    <main [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+    <router-outlet #o="outlet"></router-outlet>
+  </main>
 
 
 </div>

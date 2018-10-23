@@ -1,7 +1,58 @@
 @import '../app/common/variables.scss';
 @import '../app/common/mixins.scss';
 
-// todo assets
+/*Generic properties*/
+
+h1,h2,h3,h4,h5 {
+    margin: 0;
+}
+h1 {
+    font-size: 3.2rem;
+}
+h2 {
+    font-size: 2.4rem;
+}
+::placeholder {
+    color: #ccc;
+}
+input {
+    font: normal 27px/48px $serif;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    margin: 5px 0;
+    color: #444;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,.125);
+    &:focus {        
+        background-color: #fff;
+        opacity: 1;
+        box-shadow: inset $fat-shadow; 
+    }
+    &.input-big {
+        font: normal 38px/60px $serif;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+}
+.serif {
+    font-family: $serif;
+}
+.sans {
+    font-family: $sans;
+}
+.hidden {
+    opacity: 0;
+}
+.showing {
+    opacity: 1!important;
+    z-index: 333!important;
+}
+
+/*Layout specific styling*/
 .body{
     position: fixed;
     right: 0;
@@ -44,7 +95,7 @@
         @include reflected-gradient(#a70036, #e80075);
         &::after {
             @extend %emblem;
-            // background-image: url(../img/emblem-red.png)
+            background-image: url(../assets/img/emblem-red.png)
         }
     }
 
@@ -53,7 +104,9 @@
         @include reflected-gradient(#0062ea, #00a2e8);
         &::after {
             @extend %emblem;
-            // background-image: url(../img/emblem-blue.png)
+            background-image: url(../assets/img/emblem-blue.png)
         }
         }
     }
+
+
