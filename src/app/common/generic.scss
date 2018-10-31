@@ -1,14 +1,20 @@
-
 /*Generic properties*/
 
 h1,h2,h3,h4,h5 {
     margin: 0;
 }
 h1 {
-    font-size: 3.2rem;
+    font: 500 10rem/6rem $serif;
+    margin-bottom: 20px;
 }
 h2 {
     font-size: 2.4rem;
+}
+h3 {
+    font: bold 20px/40px $sans;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    clear: both;
 }
 ::placeholder {
     color: #ccc;
@@ -50,7 +56,12 @@ input {
     opacity: 1!important;
     z-index: 333!important;
 }
-
+.full-width {
+    width: 100%!important;
+}
+.text-center {
+    text-align: center;
+}
 .next {
     background-color: $green;
     border: none;
@@ -125,4 +136,12 @@ input {
             box-shadow: inset $fat-shadow;
         }
     }
+}
+
+.status {
+    color: #fff;
+    -webkit-transition: all ease-in .5s; 
+    transition: all ease-in .5s;
+    text-shadow: $med-shadow;
+    margin-bottom: 0;
 }

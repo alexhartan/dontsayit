@@ -16,7 +16,8 @@ export class WelcomeComponent implements OnInit {
   constructor(
     private _formBuilder: FormBuilder,
     private _mockProvider: MockProvider,
-    private _router: Router
+    private _router: Router,
+    private _mbs: MessageBusService
   ) {
 
     this.roomForm = this._formBuilder.group({

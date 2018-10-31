@@ -1,7 +1,6 @@
-
 .main-frame {
         position: absolute;
-        top: 50%;
+        top: 45%;
         bottom: 0;
         width: 100%;
         min-height: 300px;
@@ -50,9 +49,6 @@
             float: left;
             background: #fff;
             border-radius: 8px;
-            h1, h2 {
-                line-height: 40px;
-            }
             &.wide {
                 margin: 135px 0 0;
                 border-radius: 0;

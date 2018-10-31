@@ -1,6 +1,13 @@
-<div class="welcome" [formGroup]="roomForm">
+<div class="main-frame box-join offset-left">
+  <h3 class="status full-width text-center">CREATE ROOM</h3>
+  <div class="welcome frame-content text-center" [formGroup]="roomForm">
+      <button class="playercount-ctrl decrease" (click)="decPlayerCount()"><i class="fas fa-angle-left"></i></button>
+      <h1>6</h1>
+      <button class="playercount-ctrl increase" (click)="incPlayerCount()"><i class="fas fa-angle-right"></i></button>
+    <h3>PLAYERS</h3>
+    <input type="text" placeholder="room code" formControlName="gameRoom" />
+  </div>
+</div>  
 
-  <label for="game-room">Sup, enter game code here:</label>
-  <input type="text" placeholder="Ex: 5434" formControlName="gameRoom" />
-  <button class="btn" (click)="connectToRoom()">Go to Room</button>
-</div>
+
+<button class="next" (click)="connectToRoom()"><i class="fas fa-angle-right"></i></button>

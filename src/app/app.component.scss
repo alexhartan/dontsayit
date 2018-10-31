@@ -60,13 +60,14 @@ input {
     top: 0;
     bottom: 0;
     background-color: #faf8f7;
-    color: #444;
+    color: #555;
     -webkit-transition: all 1s ease-out;
     transition: opacity 1s ease-out;
 }
     
 .progress-bg {
     position: absolute;
+    z-index: -1;
     left: 0;
     top: 0;
     bottom: 0;
@@ -108,5 +109,3 @@ input {
         }
         }
     }
-
-
