@@ -1,13 +1,11 @@
-<div class="main-frame box-join offset-left">
-  <h3 class="status full-width text-center">CREATE ROOM</h3>
+<div class="main-frame box-join offset-left text-center">
+  <h3 class="status full-width">JOIN EXISTING ROOM</h3>
   <div class="welcome frame-content text-center" [formGroup]="roomForm">
-      <button class="playercount-ctrl decrease" (click)="decPlayerCount()"><i class="fas fa-angle-left"></i></button>
-      <h1>6</h1>
-      <button class="playercount-ctrl increase" (click)="incPlayerCount()"><i class="fas fa-angle-right"></i></button>
-    <h3>PLAYERS</h3>
-    <input type="text" placeholder="room code" formControlName="gameRoom" />
+    <input class="input-big" type="text" placeholder="room code" formControlName="gameRoom" />
+    <button class="btn full-width text-blue" (click)="connectToRoom()">JOIN</button>
+    <h3 class="status">OR</h3>
+    <button class="btn full-width text-red">CREATE NEW ROOM</button>
   </div>
 </div>  
 
 
-<button class="next" (click)="connectToRoom()"><i class="fas fa-angle-right"></i></button>
