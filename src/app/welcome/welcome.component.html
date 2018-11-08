@@ -4,7 +4,7 @@
     <input class="input-big" type="text" placeholder="room code" formControlName="gameRoom" />
     <button class="btn full-width text-blue" (click)="connectToRoom()">JOIN</button>
     <h3 class="status">OR</h3>
-    <button class="btn full-width text-red">CREATE NEW ROOM</button>
+    <button class="btn full-width text-red" [routerLink]="['/create-room']">CREATE NEW ROOM</button>
   </div>
 </div>  
 

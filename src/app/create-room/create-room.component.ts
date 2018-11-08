@@ -3,15 +3,20 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { MockProvider } from '../API/MockProvider';
 import { Router } from '@angular/router';
-
+var muiepsd = 'hlaa';
 @Component({
-  selector: 'app-welcome',
-  templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.scss']
+  selector: 'app-create-room',
+  templateUrl: './create-room.component.html',
+  styleUrls: ['./create-room.component.scss']
 })
-export class WelcomeComponent implements OnInit {
+export class CreateRoomComponent implements OnInit {
 
   public roomForm: FormGroup;
+
+  public playerCounter: number;
+
+  public readonly MINPLAYERS = 4;
+  public readonly MAXPLAYERS = 12;
 
   constructor(
     private _formBuilder: FormBuilder,
@@ -19,7 +24,8 @@ export class WelcomeComponent implements OnInit {
     private _router: Router,
     private _mbs: MessageBusService
   ) {
-
+    
+    this.playerCounter = 6;
     this.roomForm = this._formBuilder.group({
       gameRoom: ['']
     });
@@ -29,12 +35,14 @@ export class WelcomeComponent implements OnInit {
     this._mbs.backgroundProgress.emit(100);
   }
 
-  connectToRoom() {
-    if (this.roomForm.controls['gameRoom'].valid) {
-      const roomCode = this.roomForm.controls['gameRoom'].value;
-      if (this._mockProvider.send()) {
-        this._router.navigate(['playerJoined', roomCode]);
-      }
+  playerCount(amount: number){
+    if(this.playerCounter < this.MINPLAYERS || this.playerCounter > this.MAXPLAYERS){
+      return;
     }
+    this.playerCounter += amount;
+  }
+
+  createRoom(){
+
   }
 }

@@ -1,3 +1,4 @@
+import { CreateRoomComponent } from './create-room/create-room.component';
 import { PlayerJoinedComponent } from './player-joined/player-joined.component';
 import { Routes } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -13,6 +14,10 @@ export const routes: Routes = [
   {
     path: 'playerJoined/:roomId',
     component: PlayerJoinedComponent
+  },
+  {
+    path: 'create-room',
+    component: CreateRoomComponent
   },
   {
     path: 'gameRoom/:roomId',
