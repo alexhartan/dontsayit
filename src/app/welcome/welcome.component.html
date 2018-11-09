@@ -1,10 +1,11 @@
 <div class="main-frame box-join offset-left text-center">
-  <h3 class="status full-width">JOIN EXISTING ROOM</h3>
-  <div class="welcome frame-content text-center" [formGroup]="roomForm">
-    <input class="input-big" type="text" placeholder="room code" formControlName="gameRoom" />
-    <button class="btn full-width text-blue" (click)="connectToRoom()">JOIN</button>
-    <h3 class="status">OR</h3>
-    <button class="btn full-width text-red" [routerLink]="['/create-room']">CREATE NEW ROOM</button>
+  <h3 class="status full-width">WELCOME!</h3>
+  <div class="welcome frame-content box-white text-center" [formGroup]="roomForm">
+    <h3 class="label full-width">JOIN A ROOM</h3>
+    <input class="input-big input-half col-xs-6" type="text" placeholder="Code" formControlName="gameRoom" />
+    <button class="btn btn-half btn-green" (click)="connectToRoom()">JOIN</button>
+    <h3 class="label full-width">OR</h3>
+    <button class="btn full-width btn-red" [routerLink]="['/create-room']">CREATE A ROOM</button>
   </div>
 </div>  
 

@@ -20,27 +20,38 @@ h3 {
     color: #ccc;
 }
 input {
-    font: normal 27px/48px $serif;
+    font: bold 27px/48px $serif;
     width: 100%;
-    border: none;
+    border: 1px solid #ddd;
     outline: none;
     text-align: center;
     outline: none;
     padding: 0;
-    margin: 0;
+    margin: 15px 0;
     margin: 5px 0;
-    color: #444;
+    color: #555;
     border-radius: 5px;
     box-shadow: inset 0 0 10px rgba(0,0,0,.125);
+    text-transform: uppercase;
     &:focus {        
         background-color: #fff;
         opacity: 1;
         box-shadow: inset $fat-shadow; 
     }
     &.input-big {
-        font: normal 38px/60px $serif;
+        font: bold 26px/60px $serif!important;
         margin-top: 15px;
+        height: 58px;
+        font-weight: 300;
         margin-bottom: 20px;
+    }
+    &.input-half {
+        float: left;
+        width: 45%;
+    }
+    &::placeholder{
+        font-weight: 300;
+        text-transform: none!important;
     }
 }
 .serif {
@@ -55,6 +66,12 @@ input {
 .showing {
     opacity: 1!important;
     z-index: 333!important;
+}
+.one-third {
+    width: 33%!important;
+}
+.two-thirds {
+    width: 67%!important;
 }
 .full-width {
     width: 100%!important;
@@ -103,22 +120,50 @@ input {
     border: none;
     outline: none;
     box-shadow: $med-shadow;
-    font: bold 18px/28px $sans;
+    font: bold 18px/30px $sans;
     text-decoration: none;
     letter-spacing: 1px;
-    padding: 16px 30px;
+    padding: 15px;
     display: block;
     text-align: center;
-    margin: 20px 0;
-    -webkit-transition: background .5s; 
-    transition: background .5s;   
+    margin: 15px 0;
+    -webkit-transition: background .25s; 
+    transition: background .25s;  
+    border-bottom: 2px solid #eee; 
+    height: 60px;
+    &.btn-half {
+        width: 45%;
+        float: right;
+    }     
     &.btn-skip {
         > span {
             font-size: 14px;
             display: block;
         } 
-    }        
+    }          
 }
+.btn-green {
+    background: $green;
+    color: #fff;
+    border-bottom-color: darken($green,8%);
+    text-shadow: $med-shadow; 
+    &:active, &:focus, &:hover {
+        background-color: darken($green,4%); 
+        border-top: 2px solid darken($green,8%);
+        border-bottom:none;
+        box-shadow: inset $med-shadow;
+    }
+} 
+.btn-red {
+    @extend .btn-green;
+    background-color: $red; 
+    border-bottom-color: darken($red,8%);
+    &:active, &:focus, &:hover {
+        background-color: darken($red,4%); 
+        border-top: 2px solid darken($red,8%);
+    }
+} 
+
 
 
 .btn-pick {
@@ -126,7 +171,9 @@ input {
     width: 45%;
     margin-left: 10%;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 22px;
+    line-height: 24px;
+    height: auto;
     &.pick-red {
         margin-left: 0;
         color: $red;
@@ -154,4 +201,12 @@ input {
     transition: all ease-in .5s;
     text-shadow: $med-shadow;
     margin-bottom: 0;
+    line-height: 56px;
+    font-size: 22px;
+}
+.label {
+    color: #999;
+    font: 300 20px/30px $sans;
+    letter-spacing: 3px;
+    clear: both;
 }

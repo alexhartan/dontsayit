@@ -8,20 +8,3 @@ h1 {
   width: 33.33%;
   text-align: center;
 }
-.playercount-btn {
-  border: none;
-  background: none;
-  float: left;
-  font-size: 4rem;
-  line-height: 7rem;
-  color: #ccc;
-  width: 33.33%;
-  text-align: center;
-  outline: none;
-  .increase {
-    float: right;
-  }
-  &:hover {
-    color: #999;
-  }
-}

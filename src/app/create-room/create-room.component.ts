@@ -3,9 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { MockProvider } from '../API/MockProvider';
 import { Router } from '@angular/router';
-var muiepsd = 'hlaa';
+
 @Component({
   selector: 'app-create-room',
+  // animations: [ <yourAnimationMethod()> ]
   templateUrl: './create-room.component.html',
   styleUrls: ['./create-room.component.scss']
 })
@@ -36,13 +37,15 @@ export class CreateRoomComponent implements OnInit {
   }
 
   playerCount(amount: number){
-    if(this.playerCounter < this.MINPLAYERS || this.playerCounter > this.MAXPLAYERS){
+    if((this.playerCounter < this.MINPLAYERS && amount < 0) ||
+       (this.playerCounter > this.MAXPLAYERS && amount > 0)){
       return;
     }
+
     this.playerCounter += amount;
   }
 
   createRoom(){
-
+    
   }
 }

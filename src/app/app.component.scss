@@ -8,7 +8,7 @@
     left: 0;
     top: 0;
     bottom: 0;
-    background-color: #faf8f7;
+    background-color: #eee;
     color: #555;
     -webkit-transition: all 1s ease-out;
     transition: opacity 1s ease-out;
@@ -21,11 +21,12 @@
     top: 0;
     bottom: 0;
     background-color: $green;
-    @include reflected-gradient(#666, #a2a2a2);
+    @include reflected-gradient(darken( $blue, 8%), lighten( $blue, 8%));
     box-shadow: inset $med-shadow;
     width: 0%;
     -webkit-transition: all 1s ease-out;
     transition: all 1s ease-out;
+    margin-right: 10px;
     &.third {
         width: 33.33%;
     }
@@ -42,7 +43,7 @@
 
     .body.red-team &{
         background-color: $red;
-        @include reflected-gradient(#a70036, #e80075);
+        @include reflected-gradient(darken( $red, 8%), lighten( $red, 8%));
         &::after {
             @extend %emblem;
             background-image: url(../assets/img/emblem-red.png)
@@ -51,7 +52,7 @@
 
     .body.blue-team &{
         background-color: $blue;
-        @include reflected-gradient(#0062ea, #00a2e8);
+        @include reflected-gradient(darken( $blue, 8%), lighten( $blue, 8%));
         &::after {
             @extend %emblem;
             background-image: url(../assets/img/emblem-blue.png)
