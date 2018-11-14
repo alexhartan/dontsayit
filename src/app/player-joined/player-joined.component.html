@@ -1,21 +1,20 @@
 
-<div class="main-frame">    
-  <div class="frame-title one-third text-center">
-      <h3 class="status">
-          TEAM-UP
-      </h3>
+<div class="player-joined {{selectedTeam}}" >    
+        <div class="main-frame">    
+          <div class="frame-title one-third text-center">
+            <h3 class="status">
+                TEAM-UP
+            </h3>
+        </div>
+      <div class="frame-content box-white">
+        <input class="input-big" placeholder="your name"/>           
+        
+        <button class="btn btn-pick pick-red" (click)="chooseTeam('red')">TEAM RED</button>
+        <button class="btn btn-pick pick-blue" (click)="chooseTeam('blue')">TEAM BLUE</button>
+      </div>  
     </div>
-  <div class="frame-content box-white">
-    <input class="input-big" placeholder="your name"/>           
-     
-    <button class="btn btn-pick pick-red" (click)="chooseTeam('red')">TEAM RED</button>
-    <button class="btn btn-pick pick-blue" (click)="chooseTeam('blue')">TEAM BLUE</button>
-  </div>  
+    <div class="footer text-center one-third">
+      <h3 class="status"><small>ROOM CODE</small> <strong>WXYZ</strong></h3>  
+    </div>
+    <button class="next" (click)="nextRoom()"><i class="fas fa-angle-right"></i></button>
 </div>
-<div class="footer text-center one-third">
-  <h3 class="status"><small>ROOM CODE</small> <strong>WXYZ</strong></h3>  
-</div>
-
-
-
-<button class="next" (click)="nextRoom()"><i class="fas fa-angle-right"></i></button>

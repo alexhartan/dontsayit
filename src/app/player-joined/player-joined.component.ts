@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerJoinedComponent implements OnInit {
 
+  selectedTeam: string;
   constructor(
     private _mbs: MessageBusService,
     private _router: Router
@@ -26,6 +27,7 @@ export class PlayerJoinedComponent implements OnInit {
   }
 
   chooseTeam(name: string){
+    this.selectedTeam = name;
     this._mbs.teamChange.emit(name);
   }
 }

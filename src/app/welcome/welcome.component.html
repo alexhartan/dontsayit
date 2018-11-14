@@ -1,17 +1,19 @@
 
-<div class="main-frame text-center">
-  <div class="frame-title full-width text-center">
-       <h3 class="status">
-         WELCOME!
-     </h3>
-   </div>
-  <div class="welcome frame-content box-white text-center" [formGroup]="roomForm">
-    <h3 class="label full-width">JOIN A ROOM</h3>
-    <input class="input-big input-half col-xs-6" type="text" placeholder="Code" formControlName="gameRoom" />
-    <button class="btn btn-half btn-green" (click)="connectToRoom()">JOIN</button>
-    <h3 class="label full-width">OR</h3>
-    <button class="btn full-width btn-red" [routerLink]="['/create-room']">CREATE A ROOM</button>
-  </div>
+<div class="welcome-comp">
+   <div class="main-frame text-center">
+    <div class="frame-title full-width text-center">
+        <h3 class="status">
+          WELCOME!
+      </h3>
+    </div>
+    <div class="welcome frame-content box-white text-center" [formGroup]="roomForm">
+      <h3 class="label full-width">JOIN A ROOM</h3>
+      <input class="input-big input-half col-xs-6" type="text" placeholder="Code" formControlName="gameRoom" />
+      <button class="btn btn-half btn-green" (click)="connectToRoom()">JOIN</button>
+      <h3 class="label full-width">OR</h3>
+      <button class="btn full-width btn-red" [routerLink]="['/create-room']">CREATE A ROOM</button>
+    </div>
+  </div>  
 </div>  
 
 

@@ -1,16 +1,20 @@
-<div class="main-frame box-join offset-left">
-  <div class="frame-title full-width text-center">
-      <h3 class="status">
-         WELCOME!
-     </h3>
-  </div>
-  <div class="welcome frame-content box-white text-center" [formGroup]="roomForm">
-        <button class="playercount-ctrl decrease" (click)="playerCount(-1)"><i class="fas fa-angle-left"></i></button>
-        <h1>{{playerCounter}}</h1>
-        <button class="playercount-ctrl increase" (click)="playerCount(1)"><i class="fas fa-angle-right"></i></button>
-      <h3 class="label text-bold">PLAYERS</h3>
-  </div>
-</div>  
+<div class="create-room"> 
+  
+  <div class="main-frame box-join offset-left">
+    <div class="frame-title full-width text-center">
+        <h3 class="status">
+          WELCOME!
+      </h3>
+    </div>
+    <div class="welcome frame-content box-white text-center" [formGroup]="roomForm">
+          <button class="playercount-ctrl decrease" (click)="playerCount(-1)"><i class="fas fa-angle-left"></i></button>
+          <h1>{{playerCounter}}</h1>
+          <button class="playercount-ctrl increase" (click)="playerCount(1)"><i class="fas fa-angle-right"></i></button>
+        <h3 class="label text-bold">PLAYERS</h3>
+    </div>
+  </div>  
 
+  <button class="next" (click)="createRoom()"><i class="fas fa-angle-right"></i></button>
 
-<button class="next" (click)="createRoom()"><i class="fas fa-angle-right"></i></button>
+</div>
+

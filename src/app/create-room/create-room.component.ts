@@ -37,8 +37,8 @@ export class CreateRoomComponent implements OnInit {
   }
 
   playerCount(amount: number){
-    if((this.playerCounter < this.MINPLAYERS && amount < 0) ||
-       (this.playerCounter > this.MAXPLAYERS && amount > 0)){
+    if((this.playerCounter <= this.MINPLAYERS && amount < 0) ||
+       (this.playerCounter >= this.MAXPLAYERS && amount > 0)){
       return;
     }
 

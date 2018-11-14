@@ -3,28 +3,30 @@
 @import '../../app/common/generic.scss';
 @import '../../app/common/layout.scss';
 
-.main-frame .frame-content.box-white {
-  padding: 60px 0 25px;
-}
-h1 {
-  float: left;
-  width: 33.33%;
-  text-align: center;
-}
-.playercount-ctrl {
-  border: none;
-  background: none;
-  float: left;
-  font-size: 4rem;
-  line-height: 7rem;
-  color: #ccc;
-  width: 33.33%;
-  text-align: center;
-  outline: none;
-  .increase {
-    float: right;
+.create-room {
+  .main-frame .frame-content.box-white {
+    padding: 60px 0 30px;
   }
-  &:hover {
-    color: #999;
+  h1 {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+  }
+  .playercount-ctrl {
+    border: none;
+    background: none;
+    float: left;
+    font-size: 4rem;
+    line-height: 7rem;
+    color: #ccc;
+    width: 33.33%;
+    text-align: center;
+    outline: none;
+    .increase {
+      float: right;
+    }
+    &:hover {
+      color: #999;
+    }
   }
 }

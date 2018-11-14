@@ -195,21 +195,9 @@ input {
     &.pick-red {
         margin-left: 0;
         color: $red;
-        &:active, &:focus, &:hover {
-            background-color: lighten($red, 3.33%);
-            color: #fff;
-            text-shadow: $med-shadow;
-            box-shadow: inset $fat-shadow;
-        }
     }
     &.pick-blue {
         color: $blue;
-        &:active, &:focus, &:hover {
-            background-color: lighten($blue, 3.33%);
-            color: #fff;
-            text-shadow: $med-shadow;
-            box-shadow: inset $fat-shadow;
-        }
     }
 }
 .status {
