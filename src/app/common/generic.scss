@@ -4,14 +4,14 @@ h1,h2,h3,h4,h5 {
     margin: 0;
 }
 h1 {
-    font: 500 10rem/6rem $serif;
+    font: 600 7.5rem/6rem $serif;
     margin-bottom: 20px;
 }
 h2 {
     font-size: 2.4rem;
 }
 h3 {
-    font: bold 20px/40px $sans;
+    font: bold 19px/40px $sans;
     letter-spacing: 1px;
     margin-bottom: 15px;
     clear: both;
@@ -71,7 +71,10 @@ input {
     width: 33%!important;
 }
 .two-thirds {
-    width: 67%!important;
+    width: 66%!important;
+}
+.half-width {
+    width: 50%!important;
 }
 .full-width {
     width: 100%!important;
@@ -82,11 +85,26 @@ input {
 .text-left {
     text-align: left;
 }
+.text-right {
+    text-align: right;
+}
 .text-red {
     color: $red;
 }
 .text-blue {
     color: $blue;
+}
+.text-bold {
+    font-weight: bold!important;
+}
+.text-normal {
+    font-weight: normal!important;
+}
+.text-slim {
+    font-weight: 300!important;
+}
+.faded {
+    opacity: .33;
 }
 .next {
     background-color: $green;
@@ -140,7 +158,7 @@ input {
             font-size: 14px;
             display: block;
         } 
-    }          
+    }        
 }
 .btn-green {
     background: $green;
@@ -177,7 +195,7 @@ input {
     &.pick-red {
         margin-left: 0;
         color: $red;
-        .body.team-red & {
+        &:active, &:focus, &:hover {
             background-color: lighten($red, 3.33%);
             color: #fff;
             text-shadow: $med-shadow;
@@ -186,7 +204,7 @@ input {
     }
     &.pick-blue {
         color: $blue;
-        .body.team-blue & {
+        &:active, &:focus, &:hover {
             background-color: lighten($blue, 3.33%);
             color: #fff;
             text-shadow: $med-shadow;
@@ -194,19 +212,47 @@ input {
         }
     }
 }
-
 .status {
     color: #fff;
     -webkit-transition: all ease-in .5s; 
     transition: all ease-in .5s;
     text-shadow: $med-shadow;
     margin-bottom: 0;
-    line-height: 56px;
-    font-size: 22px;
+    line-height: 22px;
+    padding: 15px 0;
+    text-transform: uppercase;
+    small {
+        font-size: 12px;
+        line-height: 18px;
+        opacity: .7;
+        display: block;
+    }
+    strong {
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
 }
 .label {
     color: #999;
-    font: 300 20px/30px $sans;
+    font: 300 20px/30px $serif;
     letter-spacing: 3px;
     clear: both;
+}
+
+.list {
+    padding: 0;
+    margin: 0;
+    float: left;
+    list-style: none;
+    margin-bottom: 30px;
+    li {
+        text-transform: uppercase;
+        font: bold 19px/40px $sans;
+    }    
+    &.list-red li {
+        color: $red;
+    }
+    &.list-blue li {
+        color: $blue;
+    }
 }

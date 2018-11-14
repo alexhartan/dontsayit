@@ -32,11 +32,11 @@ export class SolutionsInputComponent implements OnInit {
       solution5: [''],
     });
 
-    this.startTimer(60);
+    this.startTimer(90);
     this._mbs.backgroundProgress.emit(66);
   }
 
-  startTimer(nrOfSeconds: number = 60) {
+  startTimer(nrOfSeconds: number = 90) {
     const countDownSub$ = interval(1000)
       .pipe(takeWhile(it => it <= nrOfSeconds))
       .subscribe(val => {

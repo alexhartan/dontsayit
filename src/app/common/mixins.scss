@@ -20,3 +20,9 @@
   background: -o-linear-gradient(top, $edge 0%, $mid 50%, $edge 100%);
   background: linear-gradient(to bottom, $edge 0%, $mid 50%, $edge 100%);
 }
+@mixin radial-gradient($mid, $edge) {
+  background: $mid;
+  background: -moz-radial-gradient(center, ellipse cover,$mid 0%, $edge 75%); 
+  background: -webkit-radial-gradient(center, ellipse cover, $mid 0%,$edge 75%); 
+  background: radial-gradient(ellipse at center, $mid 0%,$edge 75%); 
+}

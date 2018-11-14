@@ -3,6 +3,9 @@
 @import '../../app/common/generic.scss';
 @import '../../app/common/layout.scss';
 
+.main-frame .frame-content.box-white {
+  padding: 60px 0 25px;
+}
 h1 {
   float: left;
   width: 33.33%;

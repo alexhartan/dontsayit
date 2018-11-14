@@ -1,16 +1,34 @@
 <div class="gameRoom">
-
-  <div class="players-list" *ngIf="grm.currentGameRoom.players.length">
-    <h2>Connected Players</h2>
-    <ul>
-      <li *ngFor="let player of grm.currentGameRoom.players">
-        {{player.name}}
-      </li>
-    </ul>
+  <div class="main-frame">    
+      <div class="frame-title two-thirds text-center">
+          <h3 class="status">
+              Everybody ready?
+          </h3>
+      </div>
+      <div class="frame-content box-white text-left">
+          <ul class="list list-blue half-width">
+              <li *ngFor="let player of grm.currentGameRoom.players">
+                  {{player.name}}
+                </li>
+          </ul>
+          <ul class="list list-red half-width text-right">
+              <li>jan</li>
+              <li>fane</li>
+              <li>mariana</li>
+              <li>dorel</li>
+          </ul>
+          <button class="btn full-width btn-green" [disabled]="!grm.currentGameRoom.players.length" [routerLink]="['/solutions']">THAT'S EVERYBODY!</button>
+    </div>
   </div>
-
-  <button class="btn" [disabled]="!grm.currentGameRoom.players.length" [routerLink]="['/solutions']">
-    All in, let's go
-  </button>
-
+  <div class="footer text-center one-third">
+    <h3 class="status"><small>ROOM CODE</small> <strong>WXYZ</strong></h3>  
+  </div>
 </div>
+  
+  
+  
+  
+
+
+
+
