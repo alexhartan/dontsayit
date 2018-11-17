@@ -1,8 +1,10 @@
+import { IGameRoom } from './../types/game/IGameRoom';
 import { MessageBusService } from './../message-bus/message-bus.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { GameRoomManager } from './game-room-manager.service';
+import { RoomHandler } from '../game-engine/room-handler';
+import { StringUtils } from '../utilities/string-utils';
 
 @Component({
   selector: 'app-game-room',
@@ -13,17 +15,40 @@ export class GameRoomComponent implements OnInit, OnDestroy {
 
   private _subscriptions$: Subscription[] = [];
 
+  public gameRoom: IGameRoom;
   constructor(
     private _activated: ActivatedRoute,
-    public grm: GameRoomManager,
+    private _roomHandler: RoomHandler,
     private _mbs: MessageBusService
   ) {
-
+    this.gameRoom = this._roomHandler.currentRoom;
   }
 
   ngOnInit() {
     const sub$ = this._activated.params.subscribe((params) => {
-      this.grm.getRoom(params['roomId']);
+      console.log(params);
+        const gameRoom = {
+          id: params['roomId'],
+          maxAllowedPlayers:4,
+          players: [{
+            id: StringUtils.getUid(),
+            name: 'Player 1',
+            avatar: ''
+          },{
+            id: StringUtils.getUid(),
+            name: 'Player 2',
+            avatar: ''
+          },{
+            id: StringUtils.getUid(),
+            name: 'Player 3',
+            avatar: ''
+          },{
+            id: StringUtils.getUid(),
+            name: 'Player 4',
+            avatar: ''
+          }]
+        }
+        this.gameRoom = gameRoom;
     });
     this._subscriptions$.push(sub$);
     this._mbs.backgroundProgress.emit(66);

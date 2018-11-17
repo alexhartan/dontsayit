@@ -7,7 +7,7 @@
       </div>
       <div class="frame-content box-white text-left">
           <ul class="list list-blue half-width">
-              <li *ngFor="let player of grm.currentGameRoom.players">
+              <li *ngFor="let player of gameRoom.players">
                   {{player.name}}
                 </li>
           </ul>
@@ -17,11 +17,11 @@
               <li>mariana</li>
               <li>dorel</li>
           </ul>
-          <button class="btn full-width btn-green" [disabled]="!grm.currentGameRoom.players.length" [routerLink]="['/solutions']">THAT'S EVERYBODY!</button>
+          <button class="btn full-width btn-green" [disabled]="!gameRoom.players.length" [routerLink]="['/solutions']">THAT'S EVERYBODY!</button>
     </div>
   </div>
   <div class="footer text-center one-third">
-    <h3 class="status"><small>ROOM CODE</small> <strong>WXYZ</strong></h3>  
+    <h3 class="status"><small>ROOM CODE</small> <strong>{{gameRoom.id}}</strong></h3>  
   </div>
 </div>
   

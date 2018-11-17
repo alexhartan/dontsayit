@@ -1,3 +1,6 @@
+import { StringUtils } from './../utilities/string-utils';
+import { IPlayer } from './../types/player/IPlayer';
+import { RoomHandler } from './../game-engine/room-handler';
 import { MessageBusService } from '../message-bus/message-bus.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
@@ -21,7 +24,7 @@ export class CreateRoomComponent implements OnInit {
 
   constructor(
     private _formBuilder: FormBuilder,
-    private _mockProvider: MockProvider,
+    private _roomHandler: RoomHandler,
     private _router: Router,
     private _mbs: MessageBusService
   ) {
@@ -45,7 +48,19 @@ export class CreateRoomComponent implements OnInit {
     this.playerCounter += amount;
   }
 
-  createRoom(){
-    
+  async createRoom(){
+
+    const player: IPlayer ={
+      id: StringUtils.getUid(),
+      name:'',
+      avatar:''
+    };
+
+    const resp = await this._roomHandler.newRoom(player);
+
+    if(resp){
+      this._router.navigate(['/playerJoined', this._roomHandler.currentRoom.id])
+    }
+
   }
 }

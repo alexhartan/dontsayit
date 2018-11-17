@@ -1,3 +1,4 @@
+import { UpcomingPlayerComponent } from './upcoming-player/upcoming-player.component';
 import { CreateRoomComponent } from './create-room/create-room.component';
 import { PlayerJoinedComponent } from './player-joined/player-joined.component';
 import { Routes } from '@angular/router';
@@ -18,6 +19,10 @@ export const routes: Routes = [
   {
     path: 'create-room',
     component: CreateRoomComponent
+  },
+  {
+    path: 'upcoming-player',
+    component: UpcomingPlayerComponent
   },
   {
     path: 'gameRoom/:roomId',
