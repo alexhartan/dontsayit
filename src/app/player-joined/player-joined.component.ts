@@ -29,7 +29,7 @@ export class PlayerJoinedComponent implements OnInit {
 
 
   nextRoom(){
-    this._router.navigate(['gameRoom', 1234]);
+    this._router.navigate(['gameRoom', this.gameRoom.id]);
   }
 
   chooseTeam(name: string){
