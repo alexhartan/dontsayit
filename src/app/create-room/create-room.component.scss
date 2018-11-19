@@ -3,14 +3,18 @@
 @import '../../app/common/generic.scss';
 @import '../../app/common/layout.scss';
 
-.create-room {
-  .main-frame .frame-content.box-white {
+.createRoom {
+  .main-frame {
+    top: 29%;
+    .frame-content.box-white {
     padding: 60px 0 30px;
   }
+}
   h1 {
     float: left;
     width: 33.33%;
     text-align: center;
+    font-size: 7.5rem;
   }
   .playercount-ctrl {
     border: none;

@@ -8,11 +8,11 @@
     left: 0;
     top: 0;
     bottom: 0;
-    background-color: #f8f8f8;
+    background-color: $blue;
     color: #666;
     -webkit-transition: all 1s ease-out;
     transition: opacity 1s ease-out;
-    font: normal 15px/30px $sans;
+    font: normal 1em/2em $sans;
 }
     
 .progress-bg {

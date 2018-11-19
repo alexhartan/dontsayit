@@ -4,23 +4,35 @@ h1,h2,h3,h4,h5 {
     margin: 0;
 }
 h1 {
-    font: 600 7.5rem/6rem $serif;
+    font: bold 3rem/5rem $serif;
     margin-bottom: 20px;
 }
 h2 {
-    font-size: 2.4rem;
+    font: bold 2.5rem/2rem $sans;
 }
 h3 {
-    font: bold 19px/40px $sans;
+    font: bold 1.5rem/2rem $sans;
     letter-spacing: 1px;
     margin-bottom: 15px;
+    clear: both;
+}
+h4 {
+    font: bold 1.33rem/2rem $sans;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    clear: both;
+}
+h5 {
+    font: bold 1rem/1.5rem $sans;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
     clear: both;
 }
 ::placeholder {
     color: #ccc;
 }
 input {
-    font: bold 27px/48px $serif;
+    font: bold 1.6rem/48px $serif;
     width: 100%;
     border: 1px solid #ddd;
     outline: none;
@@ -39,10 +51,10 @@ input {
         box-shadow: inset $fat-shadow; 
     }
     &.input-big {
-        font: bold 26px/60px $serif!important;
+        font-size: 1.75rem;
+        line-height: 60px;
         margin-top: 15px;
         height: 58px;
-        font-weight: 300;
         margin-bottom: 20px;
     }
     &.input-half {
@@ -123,7 +135,10 @@ input {
     box-shadow: $down-fat;
     -webkit-transition: opacity ease-in .5s; 
     transition: opacity ease-in .5s;
-    z-index: 123;
+    z-index: 1234;
+    .frame-content & {
+        bottom: -30px;
+    }
     &.inactive {
         background-color: $neutral;
     }
@@ -138,7 +153,7 @@ input {
     border: none;
     outline: none;
     box-shadow: $med-shadow;
-    font: bold 18px/30px $sans;
+    font: bold 1.2rem/30px $sans;
     text-decoration: none;
     letter-spacing: 1px;
     padding: 15px;
@@ -189,8 +204,8 @@ input {
     width: 45%;
     margin-left: 10%;
     margin-bottom: 20px;
-    font-size: 22px;
-    line-height: 24px;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
     height: auto;
     &.pick-red {
         margin-left: 0;
@@ -202,8 +217,6 @@ input {
 }
 .status {
     color: #fff;
-    -webkit-transition: all ease-in .5s; 
-    transition: all ease-in .5s;
     text-shadow: $med-shadow;
     margin-bottom: 0;
     line-height: 22px;
@@ -211,8 +224,8 @@ input {
     text-transform: uppercase;
     small {
         font-size: 12px;
-        line-height: 18px;
-        opacity: .7;
+        opacity: .67;
+        letter-spacing: 1px;
         display: block;
     }
     strong {
@@ -222,7 +235,8 @@ input {
 }
 .label {
     color: #999;
-    font: 300 20px/30px $serif;
+    font-family: $serif;
+    font-weight: 300;
     letter-spacing: 3px;
     clear: both;
 }
@@ -235,7 +249,7 @@ input {
     margin-bottom: 30px;
     li {
         text-transform: uppercase;
-        font: bold 19px/40px $sans;
+        font: bold 1.2rem/2.5rem $sans;
     }    
     &.list-red li {
         color: $red;

@@ -4,16 +4,21 @@
 @import '../../app/common/layout.scss';
 
 .player-joined {
+    .main-frame {
+            margin-top: -185px;
+    }
     &.blue .pick-blue{
             background-color: lighten($blue, 3.33%);
             color: #fff;
             text-shadow: $med-shadow;
             box-shadow: inset $fat-shadow;
+            border-bottom-color: $blue;
     }
     &.red .pick-red{
             background-color: lighten($red, 3.33%);
             color: #fff;
             text-shadow: $med-shadow;
             box-shadow: inset $fat-shadow;
+            border-bottom-color: $red;
     }
 }

@@ -3,16 +3,16 @@
 @import '../../app/common/generic.scss';
 @import '../../app/common/layout.scss';
 
-.main-frame {
-    top: 50%;
-    margin-top: -232px;
-}
-.timer {
-    padding: 18px 0;
-    strong {
-        position: relative;
-        bottom: 10px;
-        font-size: 58px;
-        letter-spacing: normal;
+.solutions-input {
+    .main-frame {
+        top: 50%;
+        margin-top: -222px;
+    }
+    .footer {
+        bottom: 32px;
+        h2.status {
+            line-height: 1rem;
+            font-size: 3rem;
+        }
     }
 }

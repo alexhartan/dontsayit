@@ -1,9 +1,10 @@
 .main-frame {
         position: absolute;
-        top: 28%;
+        top: 50%;
         bottom: 0;
         width: 88%;
         padding: 0 6%;
+        margin-top: -100px;
         z-index: 100;
         -webkit-transition: all 1s; 
         transition: all 1s;
@@ -27,20 +28,7 @@
                 background: #fff;
                 padding: 30px;
                 border-radius: 8px;
-            }
-            &.wide {
-                margin: 135px 0 0;
-                border-radius: 0;
-                width: 100%;
-                -webkit-transition: opacity ease-in .5s; 
-                transition: opacity ease-in .5s;
-                transition-delay: 2s;   
-                margin-bottom: -59px!important;
-                position: absolute;
-                bottom: 50vh;
-                top: auto;
-                margin-top: 0!important;
-            }  
+            } 
             /* BOX DROP SHADOW 
             &:after { 
                 content: ' ';
@@ -53,6 +41,15 @@
             }
             */
         }
+        &.frame-wide {
+            width: 100%;
+            padding: 0;
+            .frame-content {
+                border-radius: 0;
+                left: 0;
+                right: 0;
+            }
+        } 
 } 
 .frame-title{
     position: absolute;
@@ -61,6 +58,6 @@
 }
 .footer{
     position: absolute;
-    bottom: 0;
+    bottom: 25px;
     z-index: 123;
 }

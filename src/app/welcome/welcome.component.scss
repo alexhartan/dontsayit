@@ -3,3 +3,8 @@
 @import '../../app/common/generic.scss';
 @import '../../app/common/layout.scss';
 
+.welcome-comp {
+    .main-frame {
+        margin-top: -200px;
+    }
+}
