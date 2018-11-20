@@ -8,7 +8,7 @@ h1 {
     margin-bottom: 20px;
 }
 h2 {
-    font: bold 2.5rem/2rem $sans;
+    font: bold 2.5rem/3rem $sans;
 }
 h3 {
     font: bold 1.5rem/2rem $sans;
@@ -27,6 +27,12 @@ h5 {
     letter-spacing: 1px;
     margin-bottom: 10px;
     clear: both;
+}
+small {
+    font-size: .75rem;
+    opacity: .6;
+    letter-spacing: 1px;
+    display: block;
 }
 ::placeholder {
     color: #ccc;
@@ -101,10 +107,17 @@ input {
     text-align: right;
 }
 .text-red {
-    color: $red;
+    color: $red!important;
 }
 .text-blue {
-    color: $blue;
+    color: $blue!important;
+}
+.text-green {
+    color: $green!important;
+}
+.text-white {
+    color: #fff!important;
+    text-shadow: $med-shadow;
 }
 .text-bold {
     font-weight: bold!important;
@@ -125,7 +138,7 @@ input {
     position: absolute;
     right: 30px;
     bottom: 30px;
-    font-size: 1.9em;
+    font-size: 1.9rem;
     line-height: 60px;
     color: #fff;
     width: 60px;
@@ -133,8 +146,6 @@ input {
     display: block;
     border-radius: 30px;
     box-shadow: $down-fat;
-    -webkit-transition: opacity ease-in .5s; 
-    transition: opacity ease-in .5s;
     z-index: 1234;
     .frame-content & {
         bottom: -30px;
@@ -146,7 +157,24 @@ input {
         bottom: -30px;
     }
 }
-
+.points {
+    background-color: $green;
+    display: block;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 40px;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: $down-fat;
+    text-shadow: $med-shadow;
+    z-index: 1234;
+    text-align: center;
+    position: absolute;
+    right: 20px;
+    top: -20px;
+}
 .btn {
     background: #fff;
     border-radius: 5px;
@@ -173,7 +201,11 @@ input {
             font-size: 14px;
             display: block;
         } 
-    }        
+    }  
+    &:active {
+        position: relative;
+        top: 1px;
+    }
 }
 .btn-green {
     background: $green;
@@ -222,12 +254,6 @@ input {
     line-height: 22px;
     padding: 15px 0;
     text-transform: uppercase;
-    small {
-        font-size: 12px;
-        opacity: .67;
-        letter-spacing: 1px;
-        display: block;
-    }
     strong {
         font-size: 25px;
         letter-spacing: 2px;
@@ -239,6 +265,13 @@ input {
     font-weight: 300;
     letter-spacing: 3px;
     clear: both;
+}
+.countdown {
+    color: #fff;
+    font-family: $sans;
+    text-shadow: $med-shadow;
+    position: absolute;
+    top: 14%;
 }
 
 .list {

@@ -1,11 +1,9 @@
 <div class="createRoom"> 
   
   <div class="main-frame box-join offset-left">
-    <div class="frame-title full-width text-center">
-        <h4 class="status">
-          WELCOME!
-      </h4>
-    </div>
+    <h4 class="status text-center">
+        WELCOME!
+    </h4>
     <div class="welcome frame-content box-white text-center" [formGroup]="roomForm">
           <button class="playercount-ctrl decrease" (click)="playerCount(-1)"><i class="fas fa-angle-left"></i></button>
           <h1>{{playerCounter}}</h1>

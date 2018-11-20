@@ -1,10 +1,30 @@
 <div class="gameRound">
+  <h1 class="countdown full-width text-center"><small>TIME LEFT</small><br/>        {{counter}}      </h1>
+  <div class="main-frame frame-wide">  
+      <h3 class="status full-width text-center">
+          TALK ABOUT:
+      </h3> 
+        <div class="frame-content box-white text-left">
+            <h2 class="serif full-width text-center">Michael Schumacher</h2>    
+            <span class="points">5</span>   
+      </div> 
+    </div>
+    <div class="footer full-width">
+      <div class="text-center one-third control">
+        <button class="btn text-red full-width" (click)="skip()"> SKIP </button>
+        <small class="full-width text-white text-bold">-5 SECONDS</small>
+      </div>
+      <div class="text-center one-third control">
+        <button class="btn text-green full-width" (click)="correct()"> GUESSED </button>  
+        <small class="full-width text-white text-bold">+1 POINT</small>
+      </div>
+        
+    </div>
 
-  <h1> ROUND 1 TIME LEFT: {{counter}}</h1>
 
-  <h2> Current solution.exe :P </h2>
-
-  <button (click)="skip()"> Skip/Jet </button>
-  <button (click)="correct()"> Correct! </button>
 
 </div>
+
+
+
+
